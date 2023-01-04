@@ -1,0 +1,31 @@
+.box{
+   
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+}
+
+.card{
+    margin: 5px;
+   
+     width: 250px;
+     border-radius: 6px;
+}
+.description-card-icon{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    gap: 15px;
+}
+
+@media screen and (max-width : 800px){
+    .box{
+
+        grid-template-columns: repeat(2 , 1fr);
+    }
+}
+@media screen and (max-width : 600px){
+    .box{
+
+        grid-template-columns: repeat(1 , 1fr);
+    }
+}

@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-input {
+    display: flex;
+   gap: 5px;
+}
+.section-input input{
+    border: none;
+    border-radius: 3px;
+}
+.section-temperature{
+    padding: 10px;
+    color: #03082e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 345px;
+    height: 150px;
+}
+
+.temperature { 
+    font-size: 25px;
+}
+
+@media screen and (max-width : 800px){
+    .section-temperature{
+        width: 280px;
+        
+    }
+}
