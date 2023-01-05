@@ -43,7 +43,7 @@ function App() {
 
   return (
     <div className="app">
-      <Card sx={{boxShadow : 3 }} style={{backgroundColor : "rgb(231 226 197)"  , display : "flex" , justifyContent : "center" , alignItems : "center"}} >
+      <Card sx={{boxShadow : 3 }} style={{backgroundColor : "rgb(231 226 197 / 36%)"  , display : "flex" , justifyContent : "center" , alignItems : "center"}} >
         <div className="overlay">
           <CardContent>
 
@@ -62,7 +62,7 @@ function App() {
                
               </div>
 
-               <Card sx={{boxShadow : 2 }} style={{backgroundColor : "#c8c3db"  }}>
+               <Card sx={{boxShadow : 2 }} style={{backgroundColor : "#cfc7c68f"  }}>
                 <CardContent>
 
               <div className=" section-temperature">

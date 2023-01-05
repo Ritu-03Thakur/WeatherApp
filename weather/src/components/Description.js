@@ -64,7 +64,7 @@ const cards = [
     <div  className='box'>
       {cards.map(({id, icon , title , data , unit })=>(
         
-        <Card  className= "card" style={{backgroundColor : "rgb(191 184 219)" , color : "#03082e"}}>
+        <Card  className= "card" style={{backgroundColor : "rgb(206 201 229 / 52%)" , color : "#03082e"}}>
       <CardContent key={id} >
         <div className="description-card-icon">
           {icon}
