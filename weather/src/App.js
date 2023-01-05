@@ -21,12 +21,17 @@ function App() {
 
   const handleUnitsClick = (e) => {
     const button = e.currentTarget;
-    const currentUnit = button.innerText.slice(1);
+   
+    if(units === "imperial"){
+      button.innerText = "Convert ° F" ; 
+      setUnits("metric");
+    }
+    else{
+      button.innerText = "Convert ° C" ; 
+      setUnits("imperial");
+    }
 
-    const isCelsius = currentUnit === "C";
-    button.innerText = isCelsius ? "Convert ° F" : "Convert ° C";
-
-    setUnits(isCelsius ? "metric" : "imperial");
+    
   };
 
   const enterKeyPressed = (e) => {
@@ -38,13 +43,13 @@ function App() {
 
   return (
     <div className="app">
-      <Card sx={{boxShadow : 3 }} style={{backgroundColor : "#cbc6c6"  , display : "flex" , justifyContent : "center" , alignItems : "center"}} >
+      <Card sx={{boxShadow : 3 }} style={{backgroundColor : "rgb(231 226 197)"  , display : "flex" , justifyContent : "center" , alignItems : "center"}} >
         <div className="overlay">
           <CardContent>
 
           {weather && (
             <div className="container">
-              <h1> Weather App </h1>
+              <h1 style={{color : "#03082e"}}> Weather App </h1>
               <div className="section-input">
                 <input
                   onKeyDown={enterKeyPressed}
@@ -53,11 +58,11 @@ function App() {
                   placeholder="Enter City ..."
                   />
                 <Button variant="contained" onClick={(e) => handleUnitsClick(e)}
-                style={{backgroundColor : "rgb(23 113 141)"  }}>Convert ° F</Button>
+                style={{backgroundColor : "#e57373"  }}>Convert ° F</Button>
                
               </div>
 
-               <Card sx={{boxShadow : 2 }} style={{backgroundColor : "c"  }}>
+               <Card sx={{boxShadow : 2 }} style={{backgroundColor : "#c8c3db"  }}>
                 <CardContent>
 
               <div className=" section-temperature">
